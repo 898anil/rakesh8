@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Rakesh8</title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body>
+    <div class="row">
+        <div class="col-3 menu" id='div1'>
+            <label>Rent</label>
+            <input type='number' id='Rent'>
+            <br>
+            <label class='month'>Y</label>
+            <label class='year'>Year</label>
+            <input type='number' id='Yr1'>
+            <br><br>
+            <label>CBW</label>
+            <input type='number' id='Cbw'>
+            <br>
+            <label class='month'>Y</label>
+            <label class='year'>Year</label>
+            <input type='number' id='Yr2'>
+            <br><br>
+            <label>FWR</label>
+            <input type='number' id='Fwr'>
+            <br>
+            <label class='month'>Y</label>
+            <label class='year'>Year</label>
+            <input type='number' id='Yr4'>
+            <br><br>
+            <label>Cess</label>
+            <input type='number' id='Cess'>
+            <br>
+            <label class='month'>Y</label>
+            <label class='year'>Year</label>
+            <input type='number' id='Yr3'>
+            <br><br>
+            <br>
+            <button onclick='ok()'> OK</button>
+            <br>
+            <br>
+        </div>
+        <div class="col-6" id='div2'>
+            <table border='5px'>
+                <tr>
+                    <td>xxxx</td>
+                    <th>3+ year</th>
+                    <th>3rd year</th>
+                    <th>2nd year</th>
+                    <th>1st year</th>
+                    <th>this year</th>
+                    <th>next year</th>
+                    <th>TOTAL</th>
+                </tr>
+                <tr>
+                    <th>Rent</th>
+                    <td id='fourr' onclick="zero4()"></td>
+                    <td id='threer' onclick="zero3()"></td>
+                    <td id='twor' onclick="zero2()"></td>
+                    <td id='oner' onclick="zero1()"></td>
+                    <td id='thisr' onclick="zero()"></td>
+                    <td id='nextr'></td>
+                    <td id='totalr'></td>
+                </tr>
+                <tr id="gayab">
+                    <th>I/Rent</th>
+                    <td id='fourri'></td>
+                    <td id='threeri'></td>
+                    <td id='twori'></td>
+                    <td id='oneri'></td>
+                    <td id='thisri'></td>
+                    <td id='nextri'></td>
+                    <td id='totalri'></td>
+                </tr>
+                <tr>
+                    <th>CBW</th>
+                    <td id='fourc' onclick="czero4()"></td>
+                    <td id='threec' onclick="czero3()"></td>
+                    <td id='twoc' onclick="czero2()"></td>
+                    <td id='onec' onclick="czero1()"></td>
+                    <td id='thisc' onclick="czero()"></td>
+                    <td id='nextc'></td>
+                    <td id='totalc'></td>
+                </tr>
+                <tr id="gayab1">
+                    <th>I/CBW</th>
+                    <td id='fourci'></td>
+                    <td id='threeci'></td>
+                    <td id='twoci'></td>
+                    <td id='oneci'></td>
+                    <td id='thisci'></td>
+                    <td id='nextci'></td>
+                    <td id='totalci'></td>
+                </tr>
+                <tr>
+                    <th>FWR</th>
+                    <td id='fourf' onclick="fzero4()"></td>
+                    <td id='threef' onclick="fzero3()"></td>
+                    <td id='twof' onclick="fzero2()"></td>
+                    <td id='onef' onclick="fzero1()"></td>
+                    <td id='thisf' onclick="fzero()"></td>
+                    <td id='nextf'></td>
+                    <td id='totalf'></td>
+                </tr>
+                <tr id="gayab2">
+                    <th>I/FWR</th>
+                    <td id='fourfi'></td>
+                    <td id='threefi'></td>
+                    <td id='twofi'></td>
+                    <td id='onefi'></td>
+                    <td id='thisfi'></td>
+                    <td id='nextfi'></td>
+                    <td id='totalfi'></td>
+                </tr>
+                <tr id="gayab3">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr id='ccol'>
+                    <th>Int</th>
+                    <td id='fourxi'></td>
+                    <td id='threexi'></td>
+                    <td id='twoxi'></td>
+                    <td id='onexi'></td>
+                    <td id='thisxi'></td>
+                    <td id='nextxi'></td>
+                    <td id='totalxi'></td>
+                </tr>
+                <tr>
+                    <th>Cess</th>
+                    <td id='fours' onclick="szero4()"></td>
+                    <td id='threes' onclick="szero3()"></td>
+                    <td id='twos' onclick="szero2()"></td>
+                    <td id='ones' onclick="szero1()"></td>
+                    <td id='thiss' onclick="szero()"></td>
+                    <td id='nexts'></td>
+                    <td id='totals'></td>
+                </tr>
+                <tr>
+                    <th>I/Cess</th>
+                    <td id='foursi'></td>
+                    <td id='threesi'></td>
+                    <td id='twosi'></td>
+                    <td id='onesi'></td>
+                    <td id='thissi'></td>
+                    <td id='nextsi'></td>
+                    <td id='totalsi'></td>
+                </tr>
+                <tr>
+                    <th>TOTAL</th>
+                    <td id='t4'></td>
+                    <td id='t3'></td>
+                    <td id='t2'></td>
+                    <td id='t1'></td>
+                    <td id='t0'></td>
+                    <td id='t'></td>
+                    <td id='tt'></td>
+                </tr>
+            </table>
+            <br>
+            <button onclick="show()">Show Int</button>
+            <br><br>
+            <button onclick='cle()'> clear</button>
+            <p id='a'>Rent : <span id="thisr1"></span> For <span id='yr11'></span> year</p>
+            <p id='b'>CBW : <span id="thisc1"></span> For <span id='yr21'></span> year</p>
+            <p id='c'>FWR : <span id="thisf1"></span> For <span id='yr41'></span> year</p>
+            <p id='d'>Cess : <span id="thiss1"></span> For <span id='yr31'></span> year</p>
+        </div>
+    </div>
+    <div class="logo"><span class="fire">R</span><span class="fire">S</span></div>
+</body>
+  <!-- <body ng-app="starter">
+
+    <ion-pane>
+      <ion-header-bar class="bar-stable">
+        <h1 class="title">Ionic Blank Starter</h1>
+      </ion-header-bar>
+      <ion-content>
+      </ion-content>
+    </ion-pane>
+  </body> -->
+</html>

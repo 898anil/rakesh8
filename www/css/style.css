@@ -1,0 +1,259 @@
+/* Empty. Add your own CSS if you like */
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+body {
+  background-color: #493d55;
+}
+
+label {
+  font-size: 30px;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+}
+
+input {
+  height: 30px;
+  width: 200px;
+  font-size: 25px;
+  font-family: "Times New Roman", Times, serif;
+  background-color: rgb(225, 225, 128);
+  border: 2px solid rgb(128, 128, 128);
+}
+
+input:hover {
+  background-color: rgb(69, 211, 116);
+  border: 2px solid rgb(74, 74, 223);
+
+}
+
+p {
+  color: #418bca;
+}
+
+#div2 {
+  display: none;
+}
+
+button {
+  height: 40px;
+  width: 200px;
+  border: 2px solid #418bca;
+  background-color: #418bca;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 25px;
+}
+
+button:hover {
+  border: 1px solid #c6c6c6;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  color: #222;
+  background-color: rgb(62, 224, 44);
+}
+
+th,
+td,
+tr {
+  font-family: "Times New Roman", Times, serif;
+  font-style: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+  background-color: rgb(225, 235, 103);
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#gayab,
+#gayab1,
+#gayab2 {
+  display: table-row;
+}
+
+#thisr1,
+#yr11,
+#thisc1,
+#yr21,
+#thisf1,
+#yr31,
+#thiss1,
+#yr41 {
+  color: white;
+}
+
+#a,
+#b,
+#c,
+#d {
+  display: none;
+}
+
+#ccol,
+#gayab3 {
+  display: none;
+}
+
+.year {
+  font-size: 20px;
+}
+
+.month {
+  color: #493d55;
+}
+
+.Yr1 {
+  background-color: black;
+}
+
+.header {
+  background-color: #9933cc;
+  color: #ffffff;
+  padding: 15px;
+}
+.menu {
+	overflow: scroll !important;
+}
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #33b5e5;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+
+.aside {
+  background-color: #33b5e5;
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.footer {
+  background-color: #0011cc;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+
+/* For desktop: */
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+
+
+
+.logo {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-family: "Colonna MT";
+  font-size: 100px;
+
+}
+
+</style><style type="text/css">.logo {
+  position: fixed;
+  right: 10px;
+  bottom: 5px;
+  text-align: center;
+  font-family: "Colonna MT";
+}
+
+.fire {
+  color: #f5f5f5;
+  text-shadow:
+    0px -2px 4px #fff,
+    0px -2px 10px #FF3,
+    0px -10px 20px #F90,
+    0px -20px 40px #C33;
+  font-size: 50px;
+}
